@@ -1,0 +1,10 @@
+# Зависимости проекта DashScope API Key Checker
+#
+# Установка:
+#   pip install -r requirements.txt
+#
+# requests[socks] = requests + PySocks.
+# PySocks нужен только для SOCKS4/5-прокси; для работы без прокси
+# или с HTTP-прокси достаточно обычного requests.
+# Остальное (tkinter, http.server, threading и т.д.) входит в стандартную библиотеку Python 3.
+requests[socks]>=2.31.0

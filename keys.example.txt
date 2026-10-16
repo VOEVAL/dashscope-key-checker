@@ -1,0 +1,9 @@
+Пример файла-«помойки»: чекер сам извлечёт из такого текста только ключи
+вида sk-... (sk- плюс 16 и более букв/цифр), дубликаты удалит.
+
+2026-10-01 12:33 | user=bill | order#4412 | token: sk-DEADBEEFDEADBEEFDEADBEEFDEADBEEF | status=paid
+какой-то случайный текст без ключей вообще
+{"keys": ["sk-CAFEBABECAFEBABECAFEBABECAFEBABE", "not-a-key"], "note": "dump"}
+LOG [warn] retry limit exceeded; backup=sk-0123456789ABCDEF0123456789ABCDEF; done
+
+Из строки выше будут извлечены 3 ключа: sk-DEAD..., sk-CAFE... и sk-0123....
